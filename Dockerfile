@@ -1,6 +1,6 @@
 FROM python:3.8
-WORKDIR .
-COPY requirements.txt .
+WORKDIR /backend
+COPY requirements.txt /backend
 RUN pip3 install --upgrade pip -r requirements.txt
-COPY . .
+COPY . /backend
 EXPOSE 5000
